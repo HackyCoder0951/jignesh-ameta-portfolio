@@ -81,15 +81,15 @@ const HeroSection = () => {
           
           {/* Tagline */}
             <p className="animate-fade-up-delay-3 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            IT Professional specializing in System Administration, Web Development, and Cloud Infrastructure. 
+            IT Professional specializing in System Administration, Backend Development, and Cloud Infrastructure. 
             Skilled in AWS, Azure, full-stack development, and DevOps with strong problem-solving abilities 
             and a passion for building scalable solutions.
             </p>
           
           {/* CTA Buttons */}
           <div className="animate-fade-up-delay-4 flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button variant="hero" size="xl" onClick={scrollToWork}>
-              View My Work
+            <Button variant="heroOutline" size="xl" onClick={scrollToWork}>
+              My Projects
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="heroOutline" size="xl">
@@ -98,7 +98,7 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          {/* Social Links */}
+          {/*{/* Social Links 
           <div className="animate-fade-up-delay-4 flex gap-6 justify-center pt-8">
             <a 
               href="https://github.com/HackyCoder0951" 
@@ -122,7 +122,7 @@ const HeroSection = () => {
             >
               <Mail className="h-6 w-6" />
             </a>
-          </div>
+          </div>*/}
         </div>
       </div>
       
