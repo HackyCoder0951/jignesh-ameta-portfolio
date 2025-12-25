@@ -60,18 +60,18 @@ const education = [
   {
     type: "education",
     title: "Master of Computer Applications (MCA)",
-    institution: "University",
-    location: "India",
-    period: "Ongoing",
-    description: "Advancing knowledge in software development, database systems, and enterprise computing."
+    institution: "Mohan Lal Sukhadia University",
+    location: "Udaipur, Rajasthan, India",
+    period: "Ongoing - 70%",
+    description: "Operating Systems, Advance Data Structures, Pythons, DBMS, Web Technologies, Networking, C, JAVA, MIS, Comp. Arch. Cloud Computing, Software Engineering, Embedded Systems, IS & Cyber Security"
   },
   {
     type: "education",
     title: "Bachelor of Computer Applications (BCA)",
-    institution: "University",
-    location: "India",
-    period: "Completed",
-    description: "Foundation in programming, databases, networking, and computer fundamentals with practical project experience."
+    institution: "Mohan Lal Sukhadia University",
+    location: "Udaipur, Rajasthan, India",
+    period: "Completed - 66%",
+    description: "Operating Systems, Data Structures Using C and C++, PC Software Packages, DBMS, Web Technologies, Networking."
   }
 ];
 
