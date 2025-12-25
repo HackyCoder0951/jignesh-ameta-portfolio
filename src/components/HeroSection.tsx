@@ -7,6 +7,7 @@ const roles = [
   "IT Infra Engineer",
   "AI Researcher",
   "System Administrator",
+  "Linux Enthusiast",
   "Python & SQL Developer",
   "Cloud & DevOps Learner",
 ];
