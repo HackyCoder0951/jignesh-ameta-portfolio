@@ -3,28 +3,52 @@ import { Briefcase, GraduationCap, Calendar, MapPin } from "lucide-react";
 const experiences = [
   {
     type: "work",
-    title: "Technical Support Engineer",
-    company: "Software Product Company",
-    location: "Chittorgarh, Rajasthan, India",
-    period: "Present",
-    description: "Providing comprehensive technical support for enterprise software products, managing SQL backend operations, and ensuring smooth system deployments.",
+    title: "Consultant : Onsite Support Engineer",
+    company: "CMS IT Services Pvt. Ltd.",
+    location: "Ahmedabad, Gujarat, India",
+    period: "Apr 2024 - Sep 2024",
+    description: "Providing comprehensive technical support for enterprise systems, ensuring smooth system deployments.",
     responsibilities: [
-      "End-to-end system support and troubleshooting for enterprise clients",
-      "SQL database management, query optimization, and backend operations",
-      "Client issue resolution and technical documentation",
-      "Software deployment, configuration, and maintenance",
-      "Collaboration with development teams for bug resolution"
+      "Handled end-to-end IT support operations including ticket management, user assistance, remote/onsite troubleshooting, and daily compliance checks.",
+      "Managed software updates, system installations, hardware maintenance, POS setup, and technical issue resolution.",
+      "Maintained IT inventory, documented activities, and ensured smooth functioning of all IT systems and applications."
     ]
   },
   {
     type: "work",
-    title: "IT Service Engineer",
-    company: "IT Infrastructure",
-    location: "India",
-    period: "Previous",
-    description: "Managed IT infrastructure, system integration, and provided hands-on support for Windows and Linux environments.",
+    title: "Technical Support Engineer",
+    company: "Relyon Softech Ltd.",
+    location: "Jaipur, Rajasthan, India",
+    period: "Jan 2022 - Sep 2022",
+    description: "Providing comprehensive technical support for enterprise software products, managing SQL backend operations, and ensuring smooth system deployments.",
     responsibilities: [
-      "System administration across Windows Server and Linux platforms",
+      "Administered and optimized SQL databases, performed backups, and ensured data integrity.",
+      "Collaborated with cross-functional teams to streamline support processes and enhance customer satisfaction.",
+      "Conducted feedback analysis and proposed improvements to enhance overall support quality and user experience.", 
+      "Improvements to enhance overall support quality and user experience.",
+    ]
+  },
+  {
+    type: "work",
+    title: "IT Engineer",
+    company: "Shree Nakoda InfoTech",
+    location: "Chittorgarh, Rajasthan,India",
+    period: "Apr 2021 - Nov 2021",
+    description: "Managed IT infrastructure, system integration, and provided hands-on support for Advance IT Infrastructures.",
+    responsibilities: [
+      "In this firm I was working on various IT Operations like Advance Computer & Laptop & Printer Repairing / Networking / CCTV Installation / Knowing Advance IT Infrastructures.",
+      "Advance Computer & Laptop & Printer Repairing / Networking / CCTV Installation / Knowing Advance IT Infrastructures."
+    ]
+  },
+  {
+    type: "work",
+    title: "System Administrator / IT Consultant - Part Time",
+    company: "Shri Sanwliya Computer Institute",
+    location: "Chittorgarh, Rajasthan, India",
+    period: "Jun 2016 - Nov 2021",
+    description: "I handle Client Server Architecture System. I was responsible for maintaining the institute's IT infrastructure, ensuring optimal performance and security.",
+    responsibilities: [
+      "Search About latest Tech Updates and give information about required System Updates & Upgrades",
       "Network configuration and security implementation",
       "Hardware and software troubleshooting",
       "User support and technical training"
