@@ -10,14 +10,14 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Jignesh Ameta | Technical Support Engineer & System Administrator</title>
+        <title>Jignesh Ameta | IT Infra Engineer & AI Researcher</title>
         <meta 
           name="description" 
-          content="Portfolio of Jignesh Ameta - Technical Support Engineer, IT Infrastructure Specialist, and Python/SQL Developer from India. Expertise in system administration, backend development, and cloud infrastructure." 
+          content="Portfolio of Jignesh Ameta - IT Infra Engineer & AI Researcher, and Python/SQL Developer from India. Expertise in system administration, backend development, and cloud infrastructure." 
         />
-        <meta name="keywords" content="Jignesh Ameta, Technical Support Engineer, System Administrator, Python Developer, SQL, Linux, DevOps, IT Infrastructure" />
-        <meta property="og:title" content="Jignesh Ameta | Technical Support Engineer & System Administrator" />
-        <meta property="og:description" content="Portfolio of Jignesh Ameta - Technical Support Engineer and Infrastructure Specialist from India." />
+        <meta name="keywords" content="Jignesh Ameta, IT Infra Engineer, AI Researcher, Python Developer, SQL, Linux, DevOps, IT Infrastructure" />
+        <meta property="og:title" content="Jignesh Ameta | IT Infra Engineer & AI Researcher" />
+        <meta property="og:description" content="Portfolio of Jignesh Ameta - IT Infra Engineer and AI Researcher from India." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://jigneshameta.dev" />

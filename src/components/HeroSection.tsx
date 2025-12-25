@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const roles = [
-  "Technical Support Engineer",
-  "IT Infrastructure Specialist",
+  "IT Infra Engineer",
+  "AI Researcher",
   "System Administrator",
   "Python & SQL Developer",
   "Cloud & DevOps Learner",
@@ -80,11 +80,11 @@ const HeroSection = () => {
           </div>
           
           {/* Tagline */}
-          <p className="animate-fade-up-delay-3 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Passionate technician-programmer from India, specializing in system administration, 
-            backend development, and cloud infrastructure. Building solutions that bridge 
-            technology and business needs.
-          </p>
+            <p className="animate-fade-up-delay-3 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            IT Professional specializing in System Administration, Web Development, and Cloud Infrastructure. 
+            Skilled in AWS, Azure, full-stack development, and DevOps with strong problem-solving abilities 
+            and a passion for building scalable solutions.
+            </p>
           
           {/* CTA Buttons */}
           <div className="animate-fade-up-delay-4 flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
