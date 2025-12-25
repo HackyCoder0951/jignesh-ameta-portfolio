@@ -6,8 +6,78 @@ import {
   Shield, 
   Terminal,
   Cpu,
-  GitBranch
+  GitBranch,
+  Lock,
+  KeyRound,
+  Globe
 } from "lucide-react";
+import {
+  SiPython,
+  SiPostgresql,
+  SiDjango,
+  SiMysql,
+  SiGnubash,
+  SiJavascript,
+  SiMarkdown,
+  SiC,
+  SiLinux,
+  SiVirtualbox,
+  SiDocker,
+  SiGithub,
+  SiAnsible,
+  SiJupyter,
+  SiPostman,
+  SiJira,
+  SiObsstudio
+} from "react-icons/si";
+import React from "react";
+
+type IconComp = React.ComponentType<{ className?: string }>;
+
+const skillIconMap: Record<string, IconComp> = {
+  // Programming Languages
+  Python: SiPython,
+  SQL: Database,
+  "Bash/Shell": SiGnubash,
+  JavaScript: SiJavascript,
+  Markdown: SiMarkdown,
+  C: SiC,
+
+  // Backend & Databases
+  PostgreSQL: SiPostgresql,
+  "MS SQL Server": Database,
+  Django: SiDjango,
+  MySQL: SiMysql,
+  "REST APIs": Code,
+
+  // OS & Infrastructure
+  "Linux (RHEL/Ubuntu)": SiLinux,
+  "Windows Server": Server,
+  "System Administration": Server,
+  Virtualization: SiVirtualbox,
+  Troubleshooting: Terminal,
+
+  // DevOps & Cloud
+  Docker: SiDocker,
+  "Git/GitHub": SiGithub,
+  "CI/CD Basics": GitBranch,
+  "Cloud Fundamentals": Cloud,
+  Ansible: SiAnsible,
+
+  // Networking & Security
+  "TCP/IP & DNS": Globe,
+  "Permissions & ACLs": Lock,
+  "AAA Model": KeyRound,
+  "Firewall Config": Shield,
+  "VPN Setup": Shield,
+
+  // Tools & Platforms
+  "VS Code": Cpu,
+  "Jupyter Notebook": SiJupyter,
+  Postman: SiPostman,
+  "Jira/Confluence": SiJira,
+  "OBS Studio": SiObsstudio,
+};
 
 const skillCategories = [
   {
@@ -27,10 +97,10 @@ const skillCategories = [
     title: "Backend & Databases",
     icon: Database,
     skills: [
-      { name: "PostgreSQL", level: 85 },
       { name: "MS SQL Server", level: 90 },
-      { name: "Django", level: 70 },
+      { name: "PostgreSQL", level: 85 },
       { name: "MySQL", level: 75 },
+      { name: "Django", level: 70 },
       { name: "REST APIs", level: 70 },
     ]
   },
@@ -114,20 +184,26 @@ const SkillsSection = () => {
 
               {/* Skills List */}
               <div className="space-y-4">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-foreground font-medium">{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
+                {category.skills.map((skill) => {
+                  const Icon = skillIconMap[skill.name];
+                  return (
+                    <div key={skill.name} className="space-y-2">
+                      <div className="flex justify-between text-sm">
+                        <div className="flex items-center gap-2">
+                          {Icon && <Icon className="h-4 w-4 text-muted-foreground" />}
+                          <span className="text-foreground font-medium">{skill.name}</span>
+                        </div>
+                        <span className="text-muted-foreground">{skill.level}%</span>
+                      </div>
+                      <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
+                          style={{ width: `${skill.level}%` }}
+                        />
+                      </div>
                     </div>
-                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
