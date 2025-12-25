@@ -20,6 +20,7 @@ import {
   SiJavascript,
   SiMarkdown,
   SiC,
+  SiPhp,
   SiLinux,
   SiVirtualbox,
   SiDocker,
@@ -42,6 +43,7 @@ const skillIconMap: Record<string, IconComp> = {
   JavaScript: SiJavascript,
   Markdown: SiMarkdown,
   C: SiC,
+  PHP: SiPhp,
 
   // Backend & Databases
   PostgreSQL: SiPostgresql,
@@ -86,15 +88,15 @@ const skillCategories = [
     skills: [
       { name: "C", level: 75 },
       { name: "SQL", level: 60 },
+      { name: "PHP", level: 60 },  
       { name: "Bash/Shell", level: 60 },
       { name: "Markdown", level: 60 },
       { name: "JavaScript", level: 50 },
-      { name: "Python", level: 40 },    
-      
+      { name: "Python", level: 40 },  
     ]
   },
   {
-    title: "Backend & Databases",
+    title: "Backend - Databases & Frameworks",
     icon: Database,
     skills: [
       { name: "MS SQL Server", level: 90 },
@@ -102,17 +104,20 @@ const skillCategories = [
       { name: "MySQL", level: 75 },
       { name: "Django", level: 70 },
       { name: "REST APIs", level: 70 },
+      { name: "ReactJS", level: 40 },
+      { name: "CodeIgniter", level: 40 },
     ]
   },
   {
     title: "OS & Infrastructure",
     icon: Server,
     skills: [
-      { name: "Linux (RHEL/Ubuntu)", level: 90 },
-      { name: "Windows Server", level: 88 },
-      { name: "System Administration", level: 85 },
-      { name: "Virtualization", level: 75 },
-      { name: "Troubleshooting", level: 92 },
+      { name: "Troubleshooting", level: 90 },
+      { name: "Linux (RHEL/Ubuntu)", level: 70 },
+      { name: "Windows Server", level: 70 },
+      { name: "System Administration", level: 70 },
+      { name: "Virtualization", level: 65 },
+      
     ]
   },
   {
