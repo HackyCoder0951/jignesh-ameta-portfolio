@@ -1,13 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import SkillsSection from "@/components/SkillsSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>Jignesh Ameta | Technical Support Engineer & System Administrator</title>
+        <meta 
+          name="description" 
+          content="Portfolio of Jignesh Ameta - Technical Support Engineer, IT Infrastructure Specialist, and Python/SQL Developer from India. Expertise in system administration, backend development, and cloud infrastructure." 
+        />
+        <meta name="keywords" content="Jignesh Ameta, Technical Support Engineer, System Administrator, Python Developer, SQL, Linux, DevOps, IT Infrastructure" />
+        <meta property="og:title" content="Jignesh Ameta | Technical Support Engineer & System Administrator" />
+        <meta property="og:description" content="Portfolio of Jignesh Ameta - Technical Support Engineer and Infrastructure Specialist from India." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://jigneshameta.dev" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-background text-foreground">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <div id="about" className="scroll-mt-20">
+            <SkillsSection />
+          </div>
+          <ExperienceSection />
+          <ProjectsSection />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
