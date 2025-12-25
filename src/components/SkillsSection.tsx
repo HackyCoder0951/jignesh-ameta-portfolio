@@ -14,12 +14,13 @@ const skillCategories = [
     title: "Programming Languages",
     icon: Code,
     skills: [
-      { name: "Python", level: 85 },
-      { name: "SQL", level: 90 },
-      { name: "Bash/Shell", level: 80 },
-      { name: "JavaScript", level: 65 },
-      { name: "Java", level: 60 },
-      { name: "C/C++", level: 55 },
+      { name: "C", level: 75 },
+      { name: "SQL", level: 60 },
+      { name: "Bash/Shell", level: 60 },
+      { name: "Markdown", level: 60 },
+      { name: "JavaScript", level: 50 },
+      { name: "Python", level: 40 },    
+      
     ]
   },
   {
