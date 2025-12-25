@@ -28,8 +28,9 @@ import {
   SiAnsible,
   SiJupyter,
   SiPostman,
-  SiJira,
-  SiObsstudio
+  SiZoho,
+  SiAuth0,
+  SiGithubactions,
 } from "react-icons/si";
 import React from "react";
 
@@ -51,6 +52,10 @@ const skillIconMap: Record<string, IconComp> = {
   Django: SiDjango,
   MySQL: SiMysql,
   "REST APIs": Code,
+  ReactJS: SiJavascript,
+  NodeJS: SiJavascript,
+  MongoDB: Database,
+  CodeIgniter: SiPhp,
 
   // OS & Infrastructure
   "Linux (RHEL/Ubuntu)": SiLinux,
@@ -65,11 +70,13 @@ const skillIconMap: Record<string, IconComp> = {
   "CI/CD Basics": GitBranch,
   "Cloud Fundamentals": Cloud,
   Ansible: SiAnsible,
+  "Github Actions": SiGithubactions,
 
   // Networking & Security
   "TCP/IP & DNS": Globe,
-  "Permissions & ACLs": Lock,
-  "AAA Model": KeyRound,
+  "Security Implementations": Lock,
+  "Routers Config": Shield,
+  "Switch Config": Shield,
   "Firewall Config": Shield,
   "VPN Setup": Shield,
 
@@ -77,8 +84,9 @@ const skillIconMap: Record<string, IconComp> = {
   "VS Code": Cpu,
   "Jupyter Notebook": SiJupyter,
   Postman: SiPostman,
-  "Jira/Confluence": SiJira,
-  "OBS Studio": SiObsstudio,
+  "AI Models ": Cpu,
+  "Zoho CRM": SiZoho,
+  "MS365 Suite": Cpu,
 };
 
 const skillCategories = [
@@ -106,6 +114,8 @@ const skillCategories = [
       { name: "REST APIs", level: 70 },
       { name: "ReactJS", level: 40 },
       { name: "CodeIgniter", level: 40 },
+      { name: "MongoDB", level: 40 },
+      { name: "NodeJS", level: 40 },
     ]
   },
   {
@@ -124,22 +134,24 @@ const skillCategories = [
     title: "DevOps & Cloud",
     icon: Cloud,
     skills: [
-      { name: "Docker", level: 70 },
       { name: "Git/GitHub", level: 85 },
-      { name: "CI/CD Basics", level: 65 },
-      { name: "Cloud Fundamentals", level: 60 },
-      { name: "Ansible", level: 55 },
+      { name: "Docker", level: 70 },
+      { name: "Github Actions", level: 45 },
+      { name: "Cloud Fundamentals", level: 40 },
+      { name: "CI/CD Basics", level: 40 },
     ]
   },
   {
     title: "Networking & Security",
     icon: Shield,
     skills: [
+      { name: "Troubleshooting", level: 85 },
       { name: "TCP/IP & DNS", level: 80 },
-      { name: "Permissions & ACLs", level: 85 },
-      { name: "AAA Model", level: 75 },
-      { name: "Firewall Config", level: 70 },
-      { name: "VPN Setup", level: 65 },
+      { name: "Security Implementations", level: 60 },
+      { name: "Firewall Config", level: 60 },
+      { name: "Routers Config", level: 60 },
+      { name: "Switch Config", level: 60 },
+      { name: "VPN Setup", level: 60 },
     ]
   },
   {
@@ -147,10 +159,11 @@ const skillCategories = [
     icon: Terminal,
     skills: [
       { name: "VS Code", level: 90 },
-      { name: "Jupyter Notebook", level: 80 },
-      { name: "Postman", level: 75 },
-      { name: "Jira/Confluence", level: 70 },
-      { name: "OBS Studio", level: 65 },
+      { name: "Zoho CRM", level: 70 },
+      { name: "AI Models ", level: 70 },
+      { name: "MS365 Suite", level: 65 },
+      { name: "Jupyter Notebook", level: 60 },
+      { name: "Postman", level: 40 },
     ]
   }
 ];
