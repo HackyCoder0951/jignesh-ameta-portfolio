@@ -15,9 +15,9 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-8">
           {/* Logo/Name */}
           <div className="text-center">
-            <h3 className="text-2xl font-bold gradient-text mb-2">Jignesh Ameta</h3>
+            <h3 className="text-3xl font-bold gradient-text mb-3">Jignesh Ameta</h3>
             <p className="text-muted-foreground text-sm">
-              Technical Support Engineer & Infrastructure Enthusiast
+                IT Infra Engineer & Linux Enthusiast from India.
             </p>
           </div>
 
