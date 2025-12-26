@@ -8,8 +8,9 @@ import {
   Cpu,
   GitBranch,
   Lock,
-  KeyRound,
-  Globe
+  Globe,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 import {
   SiPython,
@@ -29,15 +30,16 @@ import {
   SiJupyter,
   SiPostman,
   SiZoho,
-  SiAuth0,
   SiGithubactions,
 } from "react-icons/si";
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { Button } from "./ui/button";
 
 type IconComp = React.ComponentType<{ className?: string }>;
 
 const skillIconMap: Record<string, IconComp> = {
-  // Programming Languages
   Python: SiPython,
   SQL: Database,
   "Bash/Shell": SiGnubash,
@@ -45,8 +47,6 @@ const skillIconMap: Record<string, IconComp> = {
   Markdown: SiMarkdown,
   C: SiC,
   PHP: SiPhp,
-
-  // Backend & Databases
   PostgreSQL: SiPostgresql,
   "MS SQL Server": Database,
   Django: SiDjango,
@@ -56,37 +56,39 @@ const skillIconMap: Record<string, IconComp> = {
   NodeJS: SiJavascript,
   MongoDB: Database,
   CodeIgniter: SiPhp,
-
-  // OS & Infrastructure
   "Linux (RHEL/Ubuntu)": SiLinux,
   "Windows Server": Server,
   "System Administration": Server,
   Virtualization: SiVirtualbox,
   Troubleshooting: Terminal,
-
-  // DevOps & Cloud
   Docker: SiDocker,
   "Git/GitHub": SiGithub,
   "CI/CD Basics": GitBranch,
   "Cloud Fundamentals": Cloud,
   Ansible: SiAnsible,
   "Github Actions": SiGithubactions,
-
-  // Networking & Security
   "TCP/IP & DNS": Globe,
   "Security Implementations": Lock,
   "Routers Config": Shield,
   "Switch Config": Shield,
   "Firewall Config": Shield,
   "VPN Setup": Shield,
-
-  // Tools & Platforms
   "VS Code": Cpu,
   "Jupyter Notebook": SiJupyter,
   Postman: SiPostman,
-  "AI Models ": Cpu,
+  "AI Models": Cpu,
   "Zoho CRM": SiZoho,
   "MS365 Suite": Cpu,
+};
+
+const getSkillLevel = (percentage: number): { label: string; color: string } => {
+  if (percentage <= 40) {
+    return { label: "Beginner", color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30" };
+  } else if (percentage <= 70) {
+    return { label: "Intermediate", color: "bg-blue-500/20 text-blue-400 border-blue-500/30" };
+  } else {
+    return { label: "Advanced", color: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30" };
+  }
 };
 
 const skillCategories = [
@@ -104,7 +106,7 @@ const skillCategories = [
     ]
   },
   {
-    title: "Backend - Databases & Frameworks",
+    title: "Backend & Databases",
     icon: Database,
     skills: [
       { name: "MS SQL Server", level: 90 },
@@ -127,7 +129,6 @@ const skillCategories = [
       { name: "Windows Server", level: 70 },
       { name: "System Administration", level: 70 },
       { name: "Virtualization", level: 65 },
-      
     ]
   },
   {
@@ -160,7 +161,7 @@ const skillCategories = [
     skills: [
       { name: "VS Code", level: 90 },
       { name: "Zoho CRM", level: 70 },
-      { name: "AI Models ", level: 70 },
+      { name: "AI Models", level: 70 },
       { name: "MS365 Suite", level: 65 },
       { name: "Jupyter Notebook", level: 60 },
       { name: "Postman", level: 40 },
@@ -169,6 +170,54 @@ const skillCategories = [
 ];
 
 const SkillsSection = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true, 
+      align: "center",
+      skipSnaps: false,
+      dragFree: false,
+    },
+    [autoplayPlugin.current]
+  );
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  const getSlideClass = (index: number) => {
+    const totalSlides = skillCategories.length;
+    const diff = (index - selectedIndex + totalSlides) % totalSlides;
+    
+    if (diff === 0) {
+      return "scale-100 opacity-100 z-20";
+    } else if (diff === 1 || diff === totalSlides - 1) {
+      return "scale-[0.85] opacity-70 z-10";
+    } else {
+      return "scale-[0.7] opacity-40 z-0";
+    }
+  };
+
   return (
     <section id="skills" className="py-24 relative overflow-hidden">
       {/* Background Gradient */}
@@ -184,47 +233,84 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => (
-            <div 
-              key={category.title}
-              className="glass-card-hover p-6 group"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <category.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground">{category.title}</h3>
-              </div>
+        {/* Skills Carousel */}
+        <div className="relative px-12">
+          {/* Navigation Buttons */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-30 h-12 w-12 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300"
+            onClick={scrollPrev}
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </Button>
+          
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-30 h-12 w-12 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-primary/20 hover:border-primary/50 transition-all duration-300"
+            onClick={scrollNext}
+          >
+            <ChevronRight className="h-6 w-6" />
+          </Button>
 
-              {/* Skills List */}
-              <div className="space-y-4">
-                {category.skills.map((skill) => {
-                  const Icon = skillIconMap[skill.name];
-                  return (
-                    <div key={skill.name} className="space-y-2">
-                      <div className="flex justify-between text-sm">
-                        <div className="flex items-center gap-2">
-                          {Icon && <Icon className="h-4 w-4 text-muted-foreground" />}
-                          <span className="text-foreground font-medium">{skill.name}</span>
-                        </div>
-                        <span className="text-muted-foreground">{skill.level}%</span>
+          {/* Carousel Container */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex touch-pan-y">
+              {skillCategories.map((category, index) => (
+                <div 
+                  key={category.title}
+                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
+                >
+                  <div 
+                    className={`glass-card-hover p-6 h-full transition-all duration-500 ease-out ${getSlideClass(index)}`}
+                  >
+                    {/* Category Header */}
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                        <category.icon className="h-6 w-6" />
                       </div>
-                      <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
+                      <h3 className="text-lg font-semibold text-foreground">{category.title}</h3>
                     </div>
-                  );
-                })}
-              </div>
+
+                    {/* Skills List */}
+                    <div className="space-y-3">
+                      {category.skills.map((skill) => {
+                        const Icon = skillIconMap[skill.name];
+                        const skillLevel = getSkillLevel(skill.level);
+                        return (
+                          <div key={skill.name} className="flex items-center justify-between gap-3 p-2 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
+                            <div className="flex items-center gap-3 flex-1 min-w-0">
+                              {Icon && <Icon className="h-4 w-4 text-muted-foreground flex-shrink-0" />}
+                              <span className="text-foreground font-medium text-sm truncate">{skill.name}</span>
+                            </div>
+                            <span className={`text-xs px-2.5 py-1 rounded-full border font-medium flex-shrink-0 ${skillLevel.color}`}>
+                              {skillLevel.label}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Dot Indicators */}
+          <div className="flex justify-center gap-2 mt-8">
+            {skillCategories.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === selectedIndex 
+                    ? "w-8 bg-primary" 
+                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                }`}
+                onClick={() => emblaApi?.scrollTo(index)}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Quick Skills Tags */}
