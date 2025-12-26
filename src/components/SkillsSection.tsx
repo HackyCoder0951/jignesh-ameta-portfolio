@@ -255,45 +255,51 @@ const SkillsSection = () => {
           </Button>
 
           {/* Carousel Container */}
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex touch-pan-y">
-              {skillCategories.map((category, index) => (
-                <div 
-                  key={category.title}
-                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
-                >
+          <div className="overflow-hidden relative" ref={emblaRef}>
+            <div className="flex">
+              {skillCategories.map((category, index) => {
+                const isCurrent = index === selectedIndex % skillCategories.length;
+                return (
                   <div 
-                    className={`glass-card-hover p-6 h-full transition-all duration-500 ease-out ${getSlideClass(index)}`}
+                    key={category.title}
+                    className="flex-[0_0_90%] min-w-0 px-4 sm:flex-[0_0_80%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] transition-all duration-500"
+                    style={{
+                      opacity: isCurrent ? 1 : 0.6,
+                      transform: isCurrent ? 'scale(1.05)' : 'scale(0.85)',
+                      zIndex: isCurrent ? 10 : 1,
+                    }}
                   >
-                    {/* Category Header */}
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                        <category.icon className="h-6 w-6" />
+                    <div className="glass-card-hover p-6 group h-full transition-all duration-500 hover:scale-105">
+                      {/* Category Header */}
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                          <category.icon className="h-6 w-6" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground">{category.title}</h3>
                       </div>
-                      <h3 className="text-lg font-semibold text-foreground">{category.title}</h3>
-                    </div>
 
-                    {/* Skills List */}
-                    <div className="space-y-3">
-                      {category.skills.map((skill) => {
-                        const Icon = skillIconMap[skill.name];
-                        const skillLevel = getSkillLevel(skill.level);
-                        return (
-                          <div key={skill.name} className="flex items-center justify-between gap-3 p-2 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
-                            <div className="flex items-center gap-3 flex-1 min-w-0">
-                              {Icon && <Icon className="h-4 w-4 text-muted-foreground flex-shrink-0" />}
-                              <span className="text-foreground font-medium text-sm truncate">{skill.name}</span>
+                      {/* Skills List */}
+                      <div className="space-y-3">
+                        {category.skills.map((skill) => {
+                          const Icon = skillIconMap[skill.name];
+                          const skillLevel = getSkillLevel(skill.level);
+                          return (
+                            <div key={skill.name} className="flex items-center justify-between gap-3 p-2 rounded-lg hover:bg-secondary/50 transition-colors duration-200">
+                              <div className="flex items-center gap-3 flex-1 min-w-0">
+                                {Icon && <Icon className="h-4 w-4 text-muted-foreground flex-shrink-0" />}
+                                <span className="text-foreground font-medium text-sm truncate">{skill.name}</span>
+                              </div>
+                              <span className={`text-xs px-2.5 py-1 rounded-full border font-medium flex-shrink-0 ${skillLevel.color}`}>
+                                {skillLevel.label}
+                              </span>
                             </div>
-                            <span className={`text-xs px-2.5 py-1 rounded-full border font-medium flex-shrink-0 ${skillLevel.color}`}>
-                              {skillLevel.label}
-                            </span>
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
