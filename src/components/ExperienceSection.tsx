@@ -63,7 +63,15 @@ const education = [
     institution: "Mohan Lal Sukhadia University",
     location: "Udaipur, Rajasthan, India",
     period: "Ongoing - 70%",
-    description: "Operating Systems, Advance Data Structures, Pythons, DBMS, Web Technologies, Networking, C, JAVA, MIS, Comp. Arch. Cloud Computing, Software Engineering, Embedded Systems, IS & Cyber Security"
+    description: "Comprehensive study of advanced computing concepts and modern technologies",
+    courses: [
+      "Advanced understanding of core computer science concepts, including operating systems, computer architecture, data structures, and software engineering.",
+      "Strong proficiency in programming, backend development, and system-level technologies using C, Java, Python, databases, and web technologies.",
+      "In-depth knowledge of networking, information systems, and cybersecurity with focus on secure, scalable, and reliable system design.",
+      "Hands-on exposure to modern computing paradigms such as cloud computing, embedded systems, virtualization, and infrastructure-oriented solutions.",
+      "Ability to align technical systems with business and organizational needs through MIS, system analysis, and strategic IT planning."
+    ]
+
   },
   {
     type: "education",
@@ -71,7 +79,14 @@ const education = [
     institution: "Mohan Lal Sukhadia University",
     location: "Udaipur, Rajasthan, India",
     period: "Completed - 66%",
-    description: "Operating Systems, Data Structures Using C and C++, PC Software Packages, DBMS, Web Technologies, Networking."
+    description: "Foundational knowledge in computer applications and IT fundamentals",
+    courses: [
+      "Fundamental understanding of computer science concepts, including basic programming, operating systems, and computer organization.",
+      "Working knowledge of programming languages such as C and Java, along with introductory scripting concepts.",
+      "Basic understanding of databases, web technologies, and application development fundamentals.",
+      "Introductory knowledge of computer networking and information security principles.",
+      "Awareness of information systems and the role of IT in supporting business processes."
+    ]
   }
 ];
 
@@ -178,7 +193,16 @@ const ExperienceSection = () => {
                       </div>
                     </div>
                     
-                    <p className="text-muted-foreground">{edu.description}</p>
+                    <p className="text-muted-foreground mb-4">{edu.description}</p>
+                    
+                    <ul className="space-y-2">
+                      {edu.courses.map((course, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-foreground/80">
+                          <span className="text-primary mt-1.5">•</span>
+                          {course}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
