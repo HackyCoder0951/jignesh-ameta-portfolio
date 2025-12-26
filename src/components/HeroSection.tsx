@@ -69,7 +69,7 @@ const HeroSection = () => {
           {/* Name */}
           <h1 className="animate-fade-up-delay-1 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
             <span className="block text-foreground">Hi, I'm</span>
-            <span className="gradient-text text-glow block mt-2">Jignesh Ameta</span>
+            <span className="gradient-text text-glow block mt-3">Jignesh Ameta</span>
           </h1>
           
           {/* Typing Effect Role */}
@@ -127,12 +127,12 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center pt-2">
           <div className="w-1 h-2 bg-primary rounded-full animate-pulse" />
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 };

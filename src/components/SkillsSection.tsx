@@ -173,7 +173,7 @@ const SkillsSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   
   const autoplayPlugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 1000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -219,13 +219,13 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden">
+    <section id="skills" className="relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="section-heading gradient-text">Skills & Expertise</h2>
           <p className="section-subheading mx-auto">
             A comprehensive toolkit built through hands-on experience in system administration, 
@@ -234,7 +234,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Carousel */}
-        <div className="relative px-12">
+        <div className="relative px-10">
           {/* Navigation Buttons */}
           <Button
             variant="ghost"
