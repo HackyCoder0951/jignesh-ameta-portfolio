@@ -234,7 +234,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Carousel */}
-        <div className="relative px-12">
+        <div className="relative px-10">
           {/* Navigation Buttons */}
           <Button
             variant="ghost"
@@ -255,7 +255,7 @@ const SkillsSection = () => {
           </Button>
 
           {/* Carousel Container */}
-          <div className="overflow-hidden" ref={emblaRef}>
+          <div className="overflow-hidden " ref={emblaRef}>
             <div className="flex touch-pan-y">
               {skillCategories.map((category, index) => (
                 <div 
@@ -263,7 +263,7 @@ const SkillsSection = () => {
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
                 >
                   <div 
-                    className={`glass-card-hover p-6 h-full transition-all duration-500 ease-out ${getSlideClass(index)}`}
+                    className={`glass-card-hover p-4 h-full transition-all duration-500 ease-out ${getSlideClass(index)}`}
                   >
                     {/* Category Header */}
                     <div className="flex items-center gap-4 mb-6">
