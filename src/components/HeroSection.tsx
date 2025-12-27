@@ -9,7 +9,7 @@ const roles = [
   "System Administrator",
   "Linux Enthusiast",
   "Python & SQL Developer",
-  "Cloud & DevOps Learner",
+  "Cloud & DevOps Enthusiast",
 ];
 
 const HeroSection = () => {

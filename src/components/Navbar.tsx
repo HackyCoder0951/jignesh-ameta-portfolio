@@ -42,11 +42,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a 
-            href="#" 
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-xl font-bold gradient-text hover:opacity-80 transition-opacity cursor-pointer"
+            href="https://github.com/HackyCoder0951" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-xl font-bold italic gradient-text hover:opacity-80 transition-opacity cursor-pointer"
           >
-            Hacky Coder
+            @_Hacky_Coder
           </a>
 
           {/* Desktop Navigation */}
