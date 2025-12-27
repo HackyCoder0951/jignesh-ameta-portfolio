@@ -20,7 +20,7 @@ const Index = () => {
         <meta property="og:description" content="Portfolio of Jignesh Ameta - IT Infra Engineer and AI Researcher from India." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://jigneshameta.dev" />
+        <link rel="canonical" href="https://hacky-coder.vercel.app/" />
       </Helmet>
       
       <div className="min-h-screen bg-background text-foreground">
