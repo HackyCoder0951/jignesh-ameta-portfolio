@@ -93,10 +93,17 @@ const HeroSection = () => {
               My Projects
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="heroOutline" size="xl">
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
+            <Button variant="heroOutline" size="xl" asChild>
+              <a
+                href="https://drive.google.com/file/d/11RPDVUnyvnsTWcIuJ_sRJXDbWV0DrYYK/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
             </Button>
+
           </div>
           
           {/*{/* Social Links 
