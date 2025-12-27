@@ -1,10 +1,11 @@
 import { Terminal, Database, Server, Shield, Cloud, Code, LucideIcon } from "lucide-react";
+import { SiLinux } from "react-icons/si";
 
 export interface Project {
   title: string;
   description: string;
   tech: string[];
-  icon: LucideIcon;
+  icon: LucideIcon | typeof SiLinux;
   category: string;
   /** GitHub repository URL - update this with your actual repo link */
   githubUrl: string;
@@ -27,54 +28,54 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "System Administration Toolkit",
-    description: "A collection of Bash and Python scripts for automating common system administration tasks including user management, backup automation, and system monitoring.",
-    tech: ["Python", "Bash", "Linux", "Cron"],
-    icon: Terminal,
-    category: "Infrastructure",
-    // 👇 UPDATE THESE LINKS
-    githubUrl: "https://github.com/HackyCoder0951",
-    demoUrl: "",
-  },
-  {
-    title: "Database Management Suite",
-    description: "SQL scripts and utilities for PostgreSQL and MS SQL Server database optimization, backup strategies, and performance monitoring dashboards.",
-    tech: ["SQL", "PostgreSQL", "MS SQL", "Python"],
+    title: "Online E-Bookshop & e-learning",
+    description: "This is an online book shop project developed by PHP framework (CodeIgniter). This application is like an online books market place, where user allows to buy and sell their books. Here user can also get different types of e-books as pdf books based on the category. This project also has many other cool functionalities.",
+    tech: ["PHP", "MySQL", "CodeIgniter", "Bootstrap", "HTML/CSS", "JS-JQuery"],
     icon: Database,
-    category: "Backend",
+    category: "Full Stack",
     // 👇 UPDATE THESE LINKS
-    githubUrl: "https://github.com/HackyCoder0951",
+    githubUrl: "https://github.com/VisionITConsultancy/E-Bookshop",
     demoUrl: "",
   },
   {
-    title: "IT Support Portal",
-    description: "A web-based ticketing and knowledge base system for IT support teams with role-based access control and automated ticket routing.",
-    tech: ["Django", "Python", "PostgreSQL", "HTML/CSS"],
+    title: "Traffic Management Command Center",
+    description: "A modern, real-time traffic management system designed for professional command center operations. Built with React, TypeScript, and Tailwind CSS.",
+    tech: ["React 18","TypeScript", "Tailwind CSS","Python", "Traffic Camera APIs","Supabase"],
     icon: Server,
     category: "Full Stack",
     // 👇 UPDATE THESE LINKS
-    githubUrl: "https://github.com/HackyCoder0951",
+    githubUrl: "https://github.com/HackyCoder0951/kalinga-drishti",
     demoUrl: "",
   },
   {
-    title: "Network Security Analyzer",
-    description: "Tools for network security assessment including port scanning utilities, firewall rule analyzers, and security audit scripts.",
-    tech: ["Python", "Bash", "Linux", "Networking"],
-    icon: Shield,
-    category: "Security",
+    title: "LVM Thin Provisioning with Auto Expansion on Ubuntu",
+    description: "This project provides a modular, production-ready setup to manage large, dynamically growing storage using LVM Thin Provisioning on Ubuntu. It enables you to start with minimal storage and expand on-the-fly by detecting and integrating new disks.",
+    tech: ["Python", "Bash", "LVM", "Linux", "Ubuntu"],
+    icon: SiLinux,
+    category: "Infrastructure",
     // 👇 UPDATE THESE LINKS
-    githubUrl: "https://github.com/HackyCoder0951",
-    demoUrl: "",
+    githubUrl: "https://github.com/HackyCoder0951/ubuntu_lvm_excercise",
+    demoUrl: "https://github.com/HackyCoder0951/ubuntu_lvm_excercise",
   },
   {
-    title: "DevOps Pipeline Templates",
-    description: "Collection of CI/CD pipeline configurations and Docker containerization templates for various application stacks.",
-    tech: ["Docker", "Git", "YAML", "Shell"],
-    icon: Cloud,
-    category: "DevOps",
+    title: "Focus Hub - Alumni Collaboration Platform",
+    description: "Focus Hub is a modern, full-stack social platform that brings together communication, knowledge sharing, and collaboration in one beautiful interface. The platform features real-time messaging, social feeds, Q&A communities, and resource sharing capabilities. It is built with React, TypeScript, Tailwind CSS, and integrates AI-powered features for enhanced user experience.",
+    tech: ["React/Vite","Cypress", "TypeScript", "Tailwind CSS", "Groq API", "AI Integration", "Supabase/PgSQL"],
+    icon: Database,
+    category: "Full Stack",
     // 👇 UPDATE THESE LINKS
-    githubUrl: "https://github.com/HackyCoder0951",
-    demoUrl: "",
+    githubUrl: "https://github.com/HackyCoder0951/focus-hub",
+    demoUrl: "https://focus-hub-two.vercel.app/",
+  },
+  {
+    title: "My Portfolio Website",
+    description: "This is my personal portfolio website showcasing my skills, experience, and projects. Built with React, TypeScript, and Tailwind CSS, it features a modern design and responsive layout.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "React Helmet"],
+    icon: Terminal,
+    category: "Portfolio",
+    // 👇 UPDATE THESE LINKS
+    githubUrl: "https://github.com/HackyCoder0951/jignesh-ameta-portfolio",
+    demoUrl: "https://hacky-coder.vercel.app/",
   },
   {
     title: "Academic Projects Collection",
