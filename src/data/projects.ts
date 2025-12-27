@@ -77,7 +77,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/HackyCoder0951/jignesh-ameta-portfolio",
     demoUrl: "https://hacky-coder.vercel.app/",
   },
-  {
+  /*{
     title: "Academic Projects Collection",
     description: "Various academic projects including data structures implementations, algorithm visualizers, and mini applications built during BCA/MCA coursework.",
     tech: ["Java", "C++", "Python", "JavaScript"],
@@ -86,5 +86,5 @@ export const projects: Project[] = [
     // 👇 UPDATE THESE LINKS
     githubUrl: "https://github.com/HackyCoder0951",
     demoUrl: "",
-  }
+  }*/
 ];
