@@ -46,7 +46,7 @@ const Navbar = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="text-xl font-bold gradient-text hover:opacity-80 transition-opacity cursor-pointer"
           >
-            JA
+            Hacky Coder
           </a>
 
           {/* Desktop Navigation */}
