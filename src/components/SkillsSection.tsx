@@ -219,7 +219,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden">
+    <section id="skills" className="relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
       
