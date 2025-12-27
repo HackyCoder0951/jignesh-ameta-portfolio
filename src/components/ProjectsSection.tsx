@@ -1,50 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Server, Database, Terminal, Code, Shield, Cloud } from "lucide-react";
-
-const projects = [
-  {
-    title: "System Administration Toolkit",
-    description: "A collection of Bash and Python scripts for automating common system administration tasks including user management, backup automation, and system monitoring.",
-    tech: ["Python", "Bash", "Linux", "Cron"],
-    icon: Terminal,
-    category: "Infrastructure"
-  },
-  {
-    title: "Database Management Suite",
-    description: "SQL scripts and utilities for PostgreSQL and MS SQL Server database optimization, backup strategies, and performance monitoring dashboards.",
-    tech: ["SQL", "PostgreSQL", "MS SQL", "Python"],
-    icon: Database,
-    category: "Backend"
-  },
-  {
-    title: "IT Support Portal",
-    description: "A web-based ticketing and knowledge base system for IT support teams with role-based access control and automated ticket routing.",
-    tech: ["Django", "Python", "PostgreSQL", "HTML/CSS"],
-    icon: Server,
-    category: "Full Stack"
-  },
-  {
-    title: "Network Security Analyzer",
-    description: "Tools for network security assessment including port scanning utilities, firewall rule analyzers, and security audit scripts.",
-    tech: ["Python", "Bash", "Linux", "Networking"],
-    icon: Shield,
-    category: "Security"
-  },
-  {
-    title: "DevOps Pipeline Templates",
-    description: "Collection of CI/CD pipeline configurations and Docker containerization templates for various application stacks.",
-    tech: ["Docker", "Git", "YAML", "Shell"],
-    icon: Cloud,
-    category: "DevOps"
-  },
-  {
-    title: "Academic Projects Collection",
-    description: "Various academic projects including data structures implementations, algorithm visualizers, and mini applications built during BCA/MCA coursework.",
-    tech: ["Java", "C++", "Python", "JavaScript"],
-    icon: Code,
-    category: "Academic"
-  }
-];
+import { ExternalLink, Github } from "lucide-react";
+import { projects } from "@/data/projects";
 
 const ProjectsSection = () => {
   return (
@@ -101,25 +57,42 @@ const ProjectsSection = () => {
 
               {/* Action Buttons */}
               <div className="flex gap-3">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="flex-1"
-                  asChild
-                >
-                  <a href="https://github.com/HackyCoder0951" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
-                  </a>
-                </Button>
-                <Button 
-                  variant="default" 
-                  size="sm" 
-                  className="flex-1"
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Demo
-                </Button>
+                {project.githubUrl && (
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="flex-1"
+                    asChild
+                  >
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </a>
+                  </Button>
+                )}
+                {project.demoUrl ? (
+                  <Button 
+                    variant="default" 
+                    size="sm" 
+                    className="flex-1"
+                    asChild
+                  >
+                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </a>
+                  </Button>
+                ) : (
+                  <Button 
+                    variant="secondary" 
+                    size="sm" 
+                    className="flex-1 opacity-50 cursor-not-allowed"
+                    disabled
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    No Demo
+                  </Button>
+                )}
               </div>
             </div>
           ))}
