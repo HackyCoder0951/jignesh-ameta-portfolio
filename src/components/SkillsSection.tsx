@@ -298,7 +298,7 @@ const SkillsSection = () => {
           </div>
 
           {/* Dot Indicators */}
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex justify-center gap-2 mt-6">
             {skillCategories.map((_, index) => (
               <button
                 key={index}
@@ -313,8 +313,8 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        {/* Quick Skills Tags */}
-        <div className="mt-16 text-center">
+        {/* Quick Skills Tags 
+        <div className="mt-6 text-center">
           <p className="text-muted-foreground mb-6">Also experienced with:</p>
           <div className="flex flex-wrap justify-center gap-3">
             {["PHP", "HTML/CSS", "Android Studio", "Matlab", "Assembly", "Adobe Suite", "IoT", "Arch Linux"].map((skill) => (
@@ -323,7 +323,7 @@ const SkillsSection = () => {
               </span>
             ))}
           </div>
-        </div>
+        </div>*/}
       </div>
     </section>
   );

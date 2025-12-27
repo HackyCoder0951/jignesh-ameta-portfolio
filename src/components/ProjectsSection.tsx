@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="py-10 relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
       

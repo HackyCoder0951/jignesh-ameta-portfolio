@@ -92,10 +92,10 @@ const education = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-24 relative overflow-hidden">
+    <section id="experience" className="py-10 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="section-heading gradient-text">Experience & Education</h2>
           <p className="section-subheading mx-auto">
             My professional journey and academic foundation in technology
