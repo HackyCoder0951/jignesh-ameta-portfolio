@@ -46,18 +46,18 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background" />
-      
+
       {/* Animated Glow Orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-glow delay-1000" />
-      
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
@@ -65,13 +65,13 @@ const HeroSection = () => {
           <p className="animate-fade-up text-muted-foreground text-lg font-medium tracking-wide uppercase">
             Welcome to my portfolio
           </p>
-          
+
           {/* Name */}
           <h1 className="animate-fade-up-delay-1 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
             <span className="block text-foreground">Hi, I'm</span>
             <span className="gradient-text text-glow block mt-3">Jignesh Ameta</span>
           </h1>
-          
+
           {/* Typing Effect Role */}
           <div className="animate-fade-up-delay-2 h-12 flex items-center justify-center">
             <span className="font-mono text-xl md:text-2xl text-primary">
@@ -79,14 +79,14 @@ const HeroSection = () => {
               <span className="inline-block w-0.5 h-6 bg-primary ml-1 animate-pulse" />
             </span>
           </div>
-          
+
           {/* Tagline */}
-            <p className="animate-fade-up-delay-3 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            IT Professional specializing in System Administration, Backend Development, and Cloud Infrastructure. 
-            Skilled in AWS, Azure, full-stack development, and DevOps with strong problem-solving abilities 
+          <p className="animate-fade-up-delay-3 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            IT Professional specializing in System Administration, Backend Development, and Cloud Infrastructure.
+            Skilled in AWS, Azure, full-stack development, and DevOps with strong problem-solving abilities
             and a passion for building scalable solutions.
-            </p>
-          
+          </p>
+
           {/* CTA Buttons */}
           <div className="animate-fade-up-delay-4 flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button variant="heroOutline" size="xl" onClick={scrollToWork}>
@@ -95,17 +95,27 @@ const HeroSection = () => {
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <a
+                href="https://drive.google.com/file/d/1rPI7FywbjtLexwp1erVaEjH81F9MdQCl/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Developer Profile
+              </a>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
+              <a
                 href="https://drive.google.com/file/d/11RPDVUnyvnsTWcIuJ_sRJXDbWV0DrYYK/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Download className="mr-2 h-5 w-5" />
-                Download Resume
+                Infra Profile
               </a>
             </Button>
 
           </div>
-          
+
           {/* {/*Social Links 
           <div className="animate-fade-up-delay-4 flex gap-6 justify-center pt-8">
             <a 
@@ -133,7 +143,7 @@ const HeroSection = () => {
           </div> */}
         </div>
       </div>
-      
+
       {/* Scroll Indicator 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center pt-2">
