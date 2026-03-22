@@ -6,6 +6,7 @@ const navLinks = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
+  { name: "Education", href: "#education" },
   { name: "Projects", href: "#projects" },
 ];
 
@@ -32,18 +33,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a 
-            href="https://github.com/HackyCoder0951" 
-            target="_blank" 
+          <a
+            href="https://github.com/HackyCoder0951"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-xl font-bold italic gradient-text hover:opacity-80 transition-opacity cursor-pointer"
           >
@@ -66,17 +66,17 @@ const Navbar = () => {
 
           {/* Desktop Social + CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <a 
-              href="https://github.com/HackyCoder0951" 
-              target="_blank" 
+            <a
+              href="https://github.com/HackyCoder0951"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Github className="h-5 w-5" />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/jignesh-ameta-621772134/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/jignesh-ameta-621772134/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
@@ -111,17 +111,17 @@ const Navbar = () => {
                 </button>
               ))}
               <div className="flex gap-4 pt-4 border-t border-border/50">
-                <a 
-                  href="https://github.com/HackyCoder0951" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/HackyCoder0951"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Github className="h-5 w-5" />
                 </a>
-                <a 
-                  href="https://www.linkedin.com/in/jignesh-ameta-621772134/" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/in/jignesh-ameta-621772134/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
