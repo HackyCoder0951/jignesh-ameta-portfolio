@@ -15,7 +15,7 @@ export interface Project {
 
 /**
  * ========================================
- * 📝 PROJECTS CONFIGURATION
+ * PROJECTS CONFIGURATION
  * ========================================
  * 
  * Update the URLs below with your actual project links:
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "React Helmet"],
     icon: Code,
     category: "Portfolio",
-    // 👇 UPDATE THESE LINKS
+    // UPDATE THESE LINKS
     githubUrl: "https://github.com/HackyCoder0951/jignesh-ameta-portfolio",
     demoUrl: "https://hacky-coder.vercel.app/",
   },
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     tech: ["Python", "FastAPI", "MongoDB (Motor / Pymongo)", "React 19", "Axios", "TypeScript", "Context API", "JWT", "Role-Based Access Control (RBAC)", "Docker", "Linux"],
     icon: Terminal,
     category: "Backend",
-    // 👇 UPDATE THESE LINKS
+    //  UPDATE THESE LINKS
     githubUrl: "https://github.com/HackyCoder0951/authdb",
     demoUrl: "https://authdb-1-1vsu.onrender.com",
   },
@@ -53,27 +53,27 @@ export const projects: Project[] = [
     tech: ["Python", "Bash", "LVM", "Linux", "Ubuntu"],
     icon: SiLinux,
     category: "Infrastructure",
-    // 👇 UPDATE THESE LINKS
+    //  UPDATE THESE LINKS
     githubUrl: "https://github.com/HackyCoder0951/ubuntu_lvm_excercise",
     demoUrl: "https://github.com/HackyCoder0951/ubuntu_lvm_excercise",
   },
-  {
-    title: "Traffic Management Command Center",
-    description: "A modern, real-time traffic management system designed for professional command center operations. Built with React, TypeScript, and Tailwind CSS.",
-    tech: ["React 18", "TypeScript", "Tailwind CSS", "Python", "Traffic Camera APIs", "Supabase"],
-    icon: Server,
-    category: "Full Stack",
-    // 👇 UPDATE THESE LINKS
-    githubUrl: "https://github.com/HackyCoder0951/kalinga-drishti",
-    demoUrl: "",
-  },
+  // {
+  //   title: "Traffic Management Command Center",
+  //   description: "A modern, real-time traffic management system designed for professional command center operations. Built with React, TypeScript, and Tailwind CSS.",
+  //   tech: ["React 18", "TypeScript", "Tailwind CSS", "Python", "Traffic Camera APIs", "Supabase"],
+  //   icon: Server,
+  //   category: "Full Stack",
+  //   //  UPDATE THESE LINKS
+  //   githubUrl: "https://github.com/HackyCoder0951/kalinga-drishti",
+  //   demoUrl: "",
+  // },
   // {
   //   title: "Focus Hub - Alumni Collaboration Platform",
   //   description: "Focus Hub is a modern, full-stack social platform that brings together communication, knowledge sharing, and collaboration in one beautiful interface. The platform features real-time messaging, social feeds, Q&A communities, and resource sharing capabilities. It is built with React, TypeScript, Tailwind CSS, and integrates AI-powered features for enhanced user experience.",
   //   tech: ["React/Vite","Cypress", "TypeScript", "Tailwind CSS", "Groq API", "AI Integration", "Supabase/PgSQL"],
   //   icon: Database,
   //   category: "Full Stack",
-  //   // 👇 UPDATE THESE LINKS
+  //   //  UPDATE THESE LINKS
   //   githubUrl: "https://github.com/HackyCoder0951/focus-hub",
   //   demoUrl: "https://focus-hub-two.vercel.app/",
   // },
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     tech: ["PHP", "MySQL", "CodeIgniter", "Bootstrap", "HTML/CSS", "JS-JQuery"],
     icon: Database,
     category: "Full Stack",
-    // 👇 UPDATE THESE LINKS
+    //  UPDATE THESE LINKS
     githubUrl: "https://github.com/VisionITConsultancy/E-Bookshop",
     demoUrl: "",
   },
