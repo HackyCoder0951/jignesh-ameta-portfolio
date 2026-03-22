@@ -8,7 +8,7 @@ const roles = [
   "AI Researcher",
   "System Administrator",
   "Linux Enthusiast",
-  "Python & SQL Developer",
+  "Back-End Development",
   "Cloud & DevOps Enthusiast",
 ];
 
@@ -106,7 +106,7 @@ const HeroSection = () => {
 
           </div>
           
-          {/*{/* Social Links 
+          {/* {/*Social Links 
           <div className="animate-fade-up-delay-4 flex gap-6 justify-center pt-8">
             <a 
               href="https://github.com/HackyCoder0951" 
@@ -130,7 +130,7 @@ const HeroSection = () => {
             >
               <Mail className="h-6 w-6" />
             </a>
-          </div>*/}
+          </div> */}
         </div>
       </div>
       
