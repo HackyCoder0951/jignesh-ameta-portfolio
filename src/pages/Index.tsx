@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import EducationSection from "@/components/EducationSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import Footer from "@/components/Footer";
 
@@ -11,9 +12,9 @@ const Index = () => {
     <>
       <Helmet>
         <title>Jignesh Ameta | IT Infra Engineer & AI Researcher</title>
-        <meta 
-          name="description" 
-          content="Portfolio of Jignesh Ameta - IT Infra Engineer & AI Researcher, and Python/SQL Developer from India. Expertise in system administration, backend development, and cloud infrastructure." 
+        <meta
+          name="description"
+          content="Portfolio of Jignesh Ameta - IT Infra Engineer & AI Researcher, and Python/SQL Developer from India. Expertise in system administration, backend development, and cloud infrastructure."
         />
         <meta name="keywords" content="Jignesh Ameta, IT Infra Engineer, AI Researcher, Python Developer, SQL, Linux, DevOps, IT Infrastructure" />
         <meta property="og:title" content="Jignesh Ameta | IT Infra Engineer & AI Researcher" />
@@ -22,22 +23,25 @@ const Index = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://hacky-coder.vercel.app/" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-background text-foreground">
         <Navbar />
         <main>
           <div id="about" className="scroll-mt-20">
-          <HeroSection />
+            <HeroSection />
           </div>
           <div id="skills" className="scroll-mt-20">
-          <SkillsSection />
+            <SkillsSection />
           </div>
           <div id="experience" className="scroll-mt-20">
-          <ExperienceSection />
+            <ExperienceSection />
+          </div>
+          <div id="education" className="scroll-mt-20">
+            <EducationSection />
           </div>
           <div id="projects" className="scroll-mt-20">
-          <ProjectsSection />
-          </div>          
+            <ProjectsSection />
+          </div>
         </main>
         <Footer />
       </div>
