@@ -1,60 +1,4 @@
-import { Briefcase, GraduationCap, Calendar, MapPin } from "lucide-react";
-
-const experiences = [
-    {
-        type: "work",
-        title: "Consultant : Onsite Support Engineer",
-        company: "CMS IT Services Pvt. Ltd.",
-        location: "Ahmedabad, Gujarat, India",
-        period: "Apr 2024 - Sep 2024",
-        description: "Providing comprehensive technical support for enterprise systems, ensuring smooth system deployments.",
-        responsibilities: [
-            "Handled end-to-end IT support operations including ticket management, user assistance, remote/onsite troubleshooting, and daily compliance checks.",
-            "Managed software updates, system installations, hardware maintenance, POS setup, and technical issue resolution.",
-            "Maintained IT inventory, documented activities, and ensured smooth functioning of all IT systems and applications."
-        ]
-    },
-    {
-        type: "work",
-        title: "Technical Support Engineer",
-        company: "Relyon Softech Ltd.",
-        location: "Jaipur, Rajasthan, India",
-        period: "Jan 2022 - Sep 2022",
-        description: "Providing comprehensive technical support for enterprise software products, managing SQL backend operations, and ensuring smooth system deployments.",
-        responsibilities: [
-            "Administered and optimized SQL databases, performed backups, and ensured data integrity.",
-            "Collaborated with cross-functional teams to streamline support processes and enhance customer satisfaction.",
-            "Conducted feedback analysis and proposed improvements to enhance overall support quality and user experience.",
-            "Improvements to enhance overall support quality and user experience.",
-        ]
-    },
-    // {
-    //   type: "work",
-    //   title: "IT Engineer",
-    //   company: "Shree Nakoda InfoTech",
-    //   location: "Chittorgarh, Rajasthan,India",
-    //   period: "Apr 2021 - Nov 2021",
-    //   description: "Managed IT infrastructure, system integration, and provided hands-on support for Advance IT Infrastructures.",
-    //   responsibilities: [
-    //     "In this firm I was working on various IT Operations like Advance Computer & Laptop & Printer Repairing / Networking / CCTV Installation / Knowing Advance IT Infrastructures.",
-    //     "Advance Computer & Laptop & Printer Repairing / Networking / CCTV Installation / Knowing Advance IT Infrastructures."
-    //   ]
-    // },
-    // {
-    //   type: "work",
-    //   title: "System Administrator / IT Consultant - Part Time",
-    //   company: "Shri Sanwliya Computer Institute",
-    //   location: "Chittorgarh, Rajasthan, India",
-    //   period: "Jun 2016 - Nov 2021",
-    //   description: "I handle Client Server Architecture System. I was responsible for maintaining the institute's IT infrastructure, ensuring optimal performance and security.",
-    //   responsibilities: [
-    //     "Search About latest Tech Updates and give information about required System Updates & Upgrades",
-    //     "Network configuration and security implementation",
-    //     "Hardware and software troubleshooting",
-    //     "User support and technical training"
-    //   ]
-    // }
-];
+import { Calendar, MapPin, Book } from "lucide-react";
 
 const education = [
     {
@@ -92,24 +36,24 @@ const education = [
 
 const EducationSection = () => {
     return (
-        <section id="education" className="py-10 relative overflow-hidden">
+        <section id="education" className="py-2 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 {/* Section Header */}
                 <div className="text-center mb-10">
-                    <h2 className="section-heading gradient-text">Experience</h2>
+                    <h2 className="section-heading gradient-text">Education</h2>
                     <p className="section-subheading mx-auto">
-                        My professional journey
+                        My academic journey
                     </p>
                 </div>
 
                 <div className="max-w-4xl mx-auto">
-                    {/* Work Experience */}
+                    {/* Education */}
                     <div className="mb-16">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                                <Briefcase className="h-5 w-5" />
+                                <Book className="h-5 w-5" />
                             </div>
-                            <h3 className="text-2xl font-bold text-foreground">Work Experience</h3>
+                            <h3 className="text-2xl font-bold text-foreground">Education</h3>
                         </div>
 
                         <div className="relative">
