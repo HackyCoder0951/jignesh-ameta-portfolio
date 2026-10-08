@@ -35,6 +35,9 @@ const ProjectsSection = () => {
                 </span>
               </div>
 
+              {/* Date */}
+              <span className="text-xs text-muted-foreground mb-1">{project.date}</span>
+
               {/* Project Content */}
               <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                 {project.title}
