@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const roles = [
-  "IT Infra Engineer",
-  "AI Researcher",
+  "DevOps & Cloud Engineer",
+  "RHCSA Certified",
+  "Full Stack Developer",
   "System Administrator",
   "Linux Enthusiast",
-  "Back-End Development",
-  "Cloud & DevOps Enthusiast",
+  "IT Infra Engineer",
 ];
 
 const HeroSection = () => {
@@ -82,9 +82,9 @@ const HeroSection = () => {
 
           {/* Tagline */}
           <p className="animate-fade-up-delay-3 text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            IT Professional specializing in System Administration, Backend Development, and Cloud Infrastructure.
-            Skilled in AWS, Azure, full-stack development, and DevOps with strong problem-solving abilities
-            and a passion for building scalable solutions.
+            RHCSA-certified engineer working across Linux, Docker, CI/CD, and observability (Prometheus, Grafana,
+            Loki, Tempo), with full-stack chops in React, Next.js, NestJS, and Python. Comfortable owning a
+            system end-to-end — from provisioning and networking to the application running on it.
           </p>
 
           {/* CTA Buttons */}

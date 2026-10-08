@@ -1,9 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import RoleProfilesSection from "@/components/RoleProfilesSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
+import CertificationsSection from "@/components/CertificationsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import Footer from "@/components/Footer";
 
@@ -30,6 +32,9 @@ const Index = () => {
           <div id="about" className="scroll-mt-20">
             <HeroSection />
           </div>
+          <div id="roles" className="scroll-mt-20">
+            <RoleProfilesSection />
+          </div>
           <div id="skills" className="scroll-mt-20">
             <SkillsSection />
           </div>
@@ -38,6 +43,9 @@ const Index = () => {
           </div>
           <div id="education" className="scroll-mt-20">
             <EducationSection />
+          </div>
+          <div id="certifications" className="scroll-mt-20">
+            <CertificationsSection />
           </div>
           <div id="projects" className="scroll-mt-20">
             <ProjectsSection />

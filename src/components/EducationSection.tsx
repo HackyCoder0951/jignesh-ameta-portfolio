@@ -6,7 +6,7 @@ const education = [
         title: "Master of Computer Applications (MCA)",
         institution: "Mohan Lal Sukhadia University",
         location: "Udaipur, Rajasthan, India",
-        period: "Ongoing - 65%",
+        period: "Nov 2024 - Aug 2026 · CGPA 7.13",
         description: "Comprehensive study of advanced computing concepts and modern technologies",
         courses: [
             "Advanced understanding of core computer science concepts, including operating systems, computer architecture, data structures, and software engineering.",
@@ -22,7 +22,7 @@ const education = [
         title: "Bachelor of Computer Applications (BCA)",
         institution: "Mohan Lal Sukhadia University",
         location: "Udaipur, Rajasthan, India",
-        period: "Completed - 66%",
+        period: "Jul 2017 - Jun 2021 · CGPA 6.9",
         description: "Foundational knowledge in computer applications and IT fundamentals",
         courses: [
             "Fundamental understanding of computer science concepts, including basic programming, operating systems, and computer organization.",

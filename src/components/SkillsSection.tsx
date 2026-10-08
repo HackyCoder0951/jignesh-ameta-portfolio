@@ -1,24 +1,34 @@
-import { 
-  Code, 
-  Database, 
-  Server, 
-  Cloud, 
-  Shield, 
+import {
+  Code,
+  Database,
+  Server,
+  Cloud,
+  Shield,
   Terminal,
   Cpu,
   GitBranch,
   Lock,
   Globe,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Bot,
+  Sparkles,
+  Activity,
+  Bell,
 } from "lucide-react";
 import {
   SiPython,
   SiPostgresql,
   SiDjango,
+  SiFastapi,
+  SiNestjs,
+  SiNextdotjs,
+  SiRedis,
+  SiNginx,
   SiMysql,
   SiGnubash,
   SiJavascript,
+  SiTypescript,
   SiMarkdown,
   SiC,
   SiPhp,
@@ -26,11 +36,19 @@ import {
   SiVirtualbox,
   SiDocker,
   SiGithub,
+  SiGitlab,
   SiAnsible,
   SiJupyter,
   SiPostman,
   SiZoho,
   SiGithubactions,
+  SiPrometheus,
+  SiGrafana,
+  SiOpentelemetry,
+  SiOpenai,
+  SiJest,
+  SiCypress,
+  SiPytest,
 } from "react-icons/si";
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
@@ -44,12 +62,18 @@ const skillIconMap: Record<string, IconComp> = {
   SQL: Database,
   "Bash/Shell": SiGnubash,
   JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
   Markdown: SiMarkdown,
   C: SiC,
   PHP: SiPhp,
   PostgreSQL: SiPostgresql,
   "MS SQL Server": Database,
   Django: SiDjango,
+  FastAPI: SiFastapi,
+  NestJS: SiNestjs,
+  "Next.js": SiNextdotjs,
+  Redis: SiRedis,
+  Nginx: SiNginx,
   MySQL: SiMysql,
   "REST APIs": Code,
   ReactJS: SiJavascript,
@@ -63,10 +87,17 @@ const skillIconMap: Record<string, IconComp> = {
   Troubleshooting: Terminal,
   Docker: SiDocker,
   "Git/GitHub": SiGithub,
+  "GitLab CI": SiGitlab,
   "CI/CD Basics": GitBranch,
   "Cloud Fundamentals": Cloud,
   Ansible: SiAnsible,
   "Github Actions": SiGithubactions,
+  Prometheus: SiPrometheus,
+  Grafana: SiGrafana,
+  Loki: Activity,
+  Tempo: Activity,
+  OpenTelemetry: SiOpentelemetry,
+  Alertmanager: Bell,
   "TCP/IP & DNS": Globe,
   "Security Implementations": Lock,
   "Routers Config": Shield,
@@ -77,8 +108,15 @@ const skillIconMap: Record<string, IconComp> = {
   "Jupyter Notebook": SiJupyter,
   Postman: SiPostman,
   "AI Models": Cpu,
+  "Prompt Engineering": Sparkles,
+  "Claude / GPT / Gemini": SiOpenai,
+  "AI Coding Agents": Bot,
+  "Groq API": Sparkles,
   "Zoho CRM": SiZoho,
   "MS365 Suite": Cpu,
+  PyTest: SiPytest,
+  Jest: SiJest,
+  Cypress: SiCypress,
 };
 
 const getSkillLevel = (percentage: number): { label: string; color: string } => {
@@ -98,11 +136,12 @@ const skillCategories = [
     skills: [
       { name: "C", level: 75 },
       { name: "SQL", level: 60 },
-      { name: "PHP", level: 60 },  
+      { name: "PHP", level: 60 },
       { name: "Bash/Shell", level: 60 },
+      { name: "TypeScript", level: 60 },
       { name: "Markdown", level: 60 },
-      { name: "JavaScript", level: 50 },
-      { name: "Python", level: 40 },  
+      { name: "JavaScript", level: 55 },
+      { name: "Python", level: 50 },
     ]
   },
   {
@@ -113,11 +152,14 @@ const skillCategories = [
       { name: "PostgreSQL", level: 85 },
       { name: "MySQL", level: 75 },
       { name: "Django", level: 70 },
+      { name: "FastAPI", level: 65 },
       { name: "REST APIs", level: 70 },
-      { name: "ReactJS", level: 40 },
+      { name: "NestJS", level: 55 },
+      { name: "Redis", level: 55 },
+      { name: "ReactJS", level: 50 },
+      { name: "Next.js", level: 50 },
       { name: "CodeIgniter", level: 40 },
       { name: "MongoDB", level: 40 },
-      { name: "NodeJS", level: 40 },
     ]
   },
   {
@@ -125,9 +167,10 @@ const skillCategories = [
     icon: Server,
     skills: [
       { name: "Troubleshooting", level: 90 },
-      { name: "Linux (RHEL/Ubuntu)", level: 70 },
+      { name: "Linux (RHEL/Ubuntu)", level: 75 },
       { name: "Windows Server", level: 70 },
       { name: "System Administration", level: 70 },
+      { name: "Nginx", level: 60 },
       { name: "Virtualization", level: 65 },
     ]
   },
@@ -137,9 +180,22 @@ const skillCategories = [
     skills: [
       { name: "Git/GitHub", level: 85 },
       { name: "Docker", level: 70 },
-      { name: "Github Actions", level: 45 },
-      { name: "Cloud Fundamentals", level: 40 },
-      { name: "CI/CD Basics", level: 40 },
+      { name: "Github Actions", level: 60 },
+      { name: "GitLab CI", level: 50 },
+      { name: "Cloud Fundamentals", level: 45 },
+      { name: "CI/CD Basics", level: 55 },
+    ]
+  },
+  {
+    title: "Observability",
+    icon: Activity,
+    skills: [
+      { name: "Prometheus", level: 55 },
+      { name: "Grafana", level: 55 },
+      { name: "Loki", level: 45 },
+      { name: "Tempo", level: 40 },
+      { name: "OpenTelemetry", level: 40 },
+      { name: "Alertmanager", level: 40 },
     ]
   },
   {
@@ -156,6 +212,16 @@ const skillCategories = [
     ]
   },
   {
+    title: "AI & LLM Tools",
+    icon: Bot,
+    skills: [
+      { name: "Prompt Engineering", level: 65 },
+      { name: "Claude / GPT / Gemini", level: 65 },
+      { name: "AI Coding Agents", level: 60 },
+      { name: "Groq API", level: 45 },
+    ]
+  },
+  {
     title: "Tools & Platforms",
     icon: Terminal,
     skills: [
@@ -163,7 +229,10 @@ const skillCategories = [
       { name: "Zoho CRM", level: 70 },
       { name: "AI Models", level: 70 },
       { name: "MS365 Suite", level: 65 },
+      { name: "PyTest", level: 55 },
       { name: "Jupyter Notebook", level: 60 },
+      { name: "Jest", level: 45 },
+      { name: "Cypress", level: 45 },
       { name: "Postman", level: 40 },
     ]
   }
