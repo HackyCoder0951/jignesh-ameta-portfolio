@@ -5,7 +5,6 @@ import {
   Code2,
   Headset,
   Terminal,
-  Wrench,
   Network,
   LucideIcon,
 } from "lucide-react";
@@ -183,28 +182,6 @@ export const roleProfiles: RoleProfile[] = [
       "GitHub Actions",
     ],
     icon: Terminal,
-  },
-  {
-    id: "it-engineer",
-    label: "IT Engineer",
-    title: "IT Engineer | Hardware, Networking & Infrastructure",
-    summary:
-      "Hands-on IT engineer experienced in computer/laptop/printer repair, networking, and CCTV installation, with a progression into client-server system administration and, most recently, software/infrastructure engineering.",
-    highlights: [
-      "IT Engineer at Shree Nakoda Infotech — advanced computer, laptop, and printer repair, networking, and CCTV installation.",
-      "Part-time Computer Operator / System Administrator / IT Consultant at Shri Sanwliya Computer Institute — client-server administration and system upgrade advisory (2016–2021).",
-      "Broadened into enterprise IT support at CMS IT Services, then software/infrastructure engineering at Appneural (Apr–Sep 2026).",
-    ],
-    skills: [
-      "Hardware Repair",
-      "Networking",
-      "CCTV Installation",
-      "Client-Server Admin",
-      "Windows",
-      "Linux",
-      "POS Setup",
-    ],
-    icon: Wrench,
   },
   {
     id: "network-engineer",

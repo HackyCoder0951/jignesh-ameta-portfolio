@@ -95,7 +95,7 @@ const HeroSection = () => {
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <a
-                href="https://drive.google.com/file/d/1rPI7FywbjtLexwp1erVaEjH81F9MdQCl/view?usp=sharing"
+                href="https://drive.google.com/file/d/1gVngjgxjZ2JIHL0zKHWQ2qP0-9YRcjiO/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -105,7 +105,7 @@ const HeroSection = () => {
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <a
-                href="https://drive.google.com/file/d/11RPDVUnyvnsTWcIuJ_sRJXDbWV0DrYYK/view?usp=sharing"
+                href="https://drive.google.com/file/d/1eBeZuDvmoXyn4KKEUdH9VQ4_tlpMYSCC/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

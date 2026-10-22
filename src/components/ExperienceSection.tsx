@@ -54,32 +54,6 @@ const experiences = [
       "Conducted feedback analysis and proposed improvements to enhance overall support quality and user experience.",
       "Improvements to enhance overall support quality and user experience.",
     ]
-  },
-  {
-    type: "work",
-    title: "IT Engineer",
-    company: "Shree Nakoda InfoTech",
-    location: "Chittorgarh, Rajasthan, India",
-    period: "Apr 2021 - Nov 2021",
-    description: "Managed IT infrastructure, system integration, and provided hands-on support for enterprise IT infrastructure.",
-    responsibilities: [
-      "Advanced computer, laptop, and printer repairing.",
-      "Networking and CCTV installation across client sites.",
-      "Knowledge of advanced IT infrastructure operations."
-    ]
-  },
-  {
-    type: "work",
-    title: "Computer Operator / System Administrator / IT Consultant (Part-Time)",
-    company: "Shri Sanwliya Computer Institute",
-    location: "Bhadsoda, Chittorgarh, Rajasthan, India",
-    period: "Jun 2016 - Nov 2021",
-    description: "Handled client-server architecture system administration while maintaining the institute's IT infrastructure.",
-    responsibilities: [
-      "Administered a client-server setup and ensured optimal performance and security.",
-      "Repaired computers and printers after learning the trade hands-on.",
-      "Researched latest tech updates and advised on required system updates and upgrades."
-    ]
   }
 ];
 
